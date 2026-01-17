@@ -1,0 +1,36 @@
+<div class="flex-col content-center place-items-center w-full border-2 border-indigo-700 rounded-2xl p-15">
+    <h1 class="text-3xl font-bold underline m-5 text-indigo-600">Score Board :</h1>
+    
+    <table class="w-100 text-left table-auto min-w-max border border-indigo-700">
+        <thead class="">
+            <tr class="bg-indigo-100/50">
+                <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                    <p class="text-center block font-sans text-sm antialiased font-bold leading-none text-blue-gray-900 opacity-70">
+                        Name
+                      </p>
+                </th>
+                <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                    <p class="text-center block font-sans text-sm antialiased font-bold leading-none text-blue-gray-900 opacity-70">
+                        Score
+                      </p>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (score of scores() ; track score) {
+                <tr>
+                    <td class="p-4 border-b border-blue-gray-50">
+                        <p class="text-center block font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
+                            {{score.username}}
+                        </p>
+                    </td>
+                    <td class="p-4 border-b border-blue-gray-50">
+                        <p class="text-center block font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
+                            {{score.score}}
+                        </p>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
